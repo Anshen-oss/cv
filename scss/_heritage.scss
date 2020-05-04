@@ -1,0 +1,50 @@
+/*Heritage*/
+%barskillprogress {
+  position: absolute;
+  height: 5px;
+  top: 0;
+  left: 0;
+  width: 80%;
+  background: var(--light);
+}
+
+.barskillprogress-git {
+  @extend %barskillprogress;
+  width: 30%;
+}
+
+.barskillprogress-html,
+.barskillprogress-scss {
+  @extend %barskillprogress;
+  width: 80%;
+}
+
+.barskillprogress-js, .barskillprogress-php {
+  @extend %barskillprogress;
+  width: 50%;
+}
+
+%barskilldot {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: var(--dark);
+  top: -2.5px;
+  transform: rotate(45deg);
+}
+
+.barskilldot-git {
+  @extend %barskilldot;
+  left: calc(30% - 5px);
+}
+
+.barskilldot-html, 
+.barskilldot-scss {
+  @extend %barskilldot;
+  left: calc(80% - 5px);
+}
+
+.barskilldot-js, .barskilldot-php {
+  @extend %barskilldot;
+  left: calc(50% - 5px);
+}
